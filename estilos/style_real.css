@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-image: url(../imagens/coraline_real.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 ul{
