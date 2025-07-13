@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site temático sobre o universo de Coraline. Explore arte, teorias, simbolismos e muito mais.">
+        <meta name="keywords" content="Coraline, Filme, Simbolismo, Arte, Animação, Outra Mãe">
+        <meta name="author" content="Giovana Schaffer Moreira">
+        <title>Coraline e o mundo secreto</title>
+        <link href="estilos/style_real.css" rel="stylesheet"/>
+     </head>
+     <body>
+        <header> 
+            <div class = "cabecalho">
+                <nav class = "barra">
+                    <ul>
+                        <li class = "mode"><a href="#" onclick="setMode('outra-mae')" class="mainmenubtn">Modo Outra-mãe
+                            <img src="imagens/botao_sem_fundo.png" class = "mode-img">
+                        </a></li>  
+                    </ul>
+                </nav>
+            </div>
+            <li class = "item-section">
+                <div class="dropdown" onclick="showSection('isexpanded3', 'itens-options-list');">
+                    <div class="display-itens">
+                        <input type="checkbox" id="isexpanded3"/>
+                        <label for="isexpanded3">
+                            <i style="margin-left: unset;" class="fa fa-chevron-down"></i>
+                        </label>
+                    </div>
+                    <a href="" onclick="setChecked('isexpanded3')" class="mainmenubtn">Main Menu</a>
+                    <nav class="menu">
+                        <ul id="itens-options-list">
+                            <li><a href="sobre.html">Sobre o filme</a></li>
+                            <li><a href="compar_ref.html">Comparações e referências</a></li>
+                            <li><a href="simbol.html">Simbolismo e teoria</a></li>
+                            <li><a href="arte_estilo.html">Arte e estilo</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </li>
+        </header>
+
+        <main>
+              
+        </main>
+
+        <footer>
+            
+        </footer>
+    </body>
+
+    <script>
+        function setChecked(check_id) {
+        event.preventDefault();
+        let checkbox = document.getElementById(check_id);
+        checkbox.checked = !checkbox.checked;
+        showSection(check_id, section_id);
+        }
+
+        function showSection(check_id, section_id) {
+            let checkbox = document.getElementById(check_id)
+            let section = document.getElementById(section_id);
+            if (checkbox.checked) {
+                section.style['opacity'] = 1;
+                section.style['display'] = 'block';
+            } else {
+                section.style['opacity'] = 0;
+                section.style['display'] = 'none';
+            }
+        }
+
+        function setMode(modo) {
+            if (modo === 'outra-mae') {
+                window.location.href = "index_outra_mae.html";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded",function(){
+            showSection('isexpanded3', 'itens-options-list');
+        })
+    </script>
+
+</html>

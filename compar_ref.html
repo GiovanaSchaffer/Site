@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site temático sobre o universo de Coraline. Explore arte, teorias, simbolismos e muito mais.">
+    <meta name="keywords" content="Coraline, Filme, Simbolismo, Arte, Animação, Outra Mãe">
+    <meta name="author" content="Giovana Schaffer Moreira">
+    <title>Coraline e o mundo secreto</title>
+    <link href="estilos/compar_ref.css" rel="stylesheet">
+</head>
+<body>
+    <div class="pagina">
+        <header>
+            <div class="cabecalho">
+                <a href="index.html">Ir para casa</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="comparacoes">
+                <h1 class="fade-in">Comparações e Referências</h1>
+
+                <h2>🌌 A Noite Estrelada × Passagem Secreta de Coraline</h2>
+                <div class="comparacao-lado-a-lado">
+                    <figure>
+                        <img src="imagens/noite-estrelada.jpg" alt="A Noite Estrelada - Van Gogh">
+                        <figcaption>A Noite Estrelada (Vincent van Gogh)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imagens/passagem-coraline.jpg" alt="Passagem secreta de Coraline">
+                        <figcaption>Passagem secreta de Coraline</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    A estética da <em>passagem secreta</em> em <strong>Coraline</strong>, com seus contornos espiralados e tons azulados envoltos em sombras, evoca diretamente o estilo expressionista e emotivo da obra <em>A Noite Estrelada</em> de <strong>Van Gogh</strong>. Em ambos os casos, o azul profundo domina o cenário, carregando simbolismos de sonho, introspecção e até loucura. As linhas curvas e contínuas do túnel lembram o movimento giratório das estrelas e nuvens no céu de Van Gogh — um mundo em rotação constante, onde a realidade parece se dissolver no imaginário. Tanto Coraline quanto o artista atravessam essas paisagens como quem mergulha em uma outra dimensão, guiados por um impulso interior que mistura curiosidade e inquietação. A arte e o cinema aqui se tocam pela forma como constroem atmosferas intensamente subjetivas e sensoriais.
+                </p>
+
+                <h2>😢 As Crianças que Choram × Fantasmas de Coraline</h2>
+                <div class="comparacao-lado-a-lado">
+                    <figure>
+                        <img src="imagens/crianca-chorando.jpg" alt="Quadro das Crianças que Choram">
+                        <figcaption>As Crianças que Choram (Bruno Amadio)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imagens/fantasmas-coraline.jpg" alt="Fantasmas das Crianças em Coraline">
+                        <figcaption>Fantasmas das Crianças em Coraline</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    Os <strong>quadros das Crianças que Choram</strong>, popularizados nas décadas de 70 e 80, causaram fascínio e medo ao redor do mundo, especialmente na Inglaterra, onde uma lenda urbana ligava as pinturas a incêndios misteriosos. A imagem da criança em sofrimento — olhos marejados, expressão perdida, fundo escuro — produz um impacto que vai além da estética: toca o imaginário coletivo sobre abandono, dor e inocência corrompida. Em <em>Coraline</em>, os <strong>fantasmas das crianças</strong> que tiveram suas almas roubadas pela Outra Mãe assumem essa mesma carga simbólica. São almas infantis presas, silenciadas, com olhos vazios e aparência translúcida. A paleta fria, esbranquiçada e o uso do vazio ao redor intensificam a sensação de luto e silêncio. Tanto os quadros quanto os fantasmas evocam uma infância perdida, marcada por sofrimento invisível, usando a estética como forma de provocar desconforto e reflexão no espectador.
+                </p>
+
+                <h2>🎃 Coraline × O Estranho Mundo de Jack</h2>
+                <div class="comparacao-lado-a-lado">
+                    <figure>
+                        <img src="imagens/coraline.jpg" alt="Coraline - Stop Motion">
+                        <figcaption>Coraline (Henry Selick)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imagens/jack.jpg" alt="O Estranho Mundo de Jack">
+                        <figcaption>O Estranho Mundo de Jack (Henry Selick)</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    <em>Coraline</em> e <em>O Estranho Mundo de Jack</em> compartilham mais do que a direção genial de <strong>Henry Selick</strong>. Ambos mergulham no <strong>estilo gótico moderno</strong>, com personagens magros, cenários distorcidos e uso dramático da luz e sombra. Os dois filmes fazem uso da técnica <em>stop motion</em> para criar mundos visualmente ricos, mas que carregam sempre uma tensão entre o belo e o estranho. Enquanto Jack vive em uma eterna celebração do Halloween, Coraline explora um mundo paralelo aparentemente perfeito, mas que revela seu lado obscuro. A estética em ambos brinca com contrastes: o colorido vibrante de um mundo sedutor versus os tons escuros do mundo real (ou da verdade oculta). Ambos os protagonistas também passam por crises de identidade, fazendo da jornada um processo de autodescoberta. As cores saturadas, os cenários excêntricos e o tom melancólico tornam essas obras não apenas semelhantes em técnica, mas também em essência.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            Olá, eu sou a Criadora do site
+        </footer>
+    </div>
+
+    <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -20px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background-image: url(../imagens/sobre.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cabecalho {
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+}
+
+.conteudo {
+    background-color: rgba(0, 0, 50, 0.6); /* fundo azul escuro transparente */
+    color: white;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+.conteudo h1 {
+    text-align: center;
+    color: #00bfff; /* azul claro */
+}
+
+footer {
+    height: 80px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}

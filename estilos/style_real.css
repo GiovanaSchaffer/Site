@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  background-image: url(../imagens/coraline_real.jpg);
+  background-size: cover;
+}
+
+ul{
+    display: flex;
+}
+
+.barra a{
+    text-decoration: none;
+    color: black;
+}
+.barra{
+    margin-right: 25px;
+}
+.barra > ul{
+    list-style: none;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.barra ul li{
+    font-weight: bold;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.item-section {
+
+    margin-top: -45px;
+
+    .display-itens {
+        label {
+            cursor: pointer;
+            color: unset;
+            text-indent: unset;
+            margin-bottom: unset;
+        }
+        #isexpanded3 {
+            display: none;
+        }
+
+        #isexpanded3:checked + label > i {
+            transform: rotate(180deg);
+        }
+    }
+
+    list-style: none;
+    margin-left: 20px;
+}
+
+#itens-options-list{
+    margin: 25px;
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: solid 1px var(--amarelo-claro);
+    box-shadow: 1px 1px var(--amarelo);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header a{
+    text-decoration: none;
+}
+.mainmenubtn {
+    background-color: #BDB6FF;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding:10px;
+}
+.mainmenubtn:hover {
+    background-color: #735CC6;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}

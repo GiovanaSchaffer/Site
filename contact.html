@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site temático sobre o universo de Coraline. Explore arte, teorias, simbolismos e muito mais.">
+    <meta name="keywords" content="Coraline, Filme, Simbolismo, Arte, Animação, Outra Mãe">
+    <meta name="author" content="Giovana Schaffer Moreira">
+    <title>Contato - Coraline e o Mundo Secreto</title>
+    <link href="estilos/contact.css" rel="stylesheet">
+</head>
+<body>
+    <div class="pagina">
+        <header>
+            <div class="cabecalho">
+                <a href="index.html">Ir para casa</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="formulario-contato">
+                <h1>Entre em Contato</h1>
+                <p>Envie sua mensagem direto do mundo real para o mundo secreto de Coraline.</p>
+
+                <form id="formContato" action="https://formsubmit.co/giovanamoreira12@gmail.com" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://seusite.com.br/obrigado.html">
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            Olá, eu sou a Criadora do site
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('formContato');
+
+            form.addEventListener('submit', function (event) {
+                const nome = document.getElementById('nome').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const mensagem = document.getElementById('mensagem').value.trim();
+
+                if (!nome || !email || !mensagem) {
+                    alert('Por favor, preencha todos os campos.');
+                    event.preventDefault();
+                    return;
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Por favor, insira um e-mail válido.');
+                    event.preventDefault();
+                    return;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
